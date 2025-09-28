@@ -76,6 +76,7 @@ ol {
   gap: 30px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .content__details {
@@ -87,7 +88,7 @@ ol {
 }
 
 .title {
-  margin-bottom: 26px;
+  margin-bottom: 21px;
   color: #FFF;
   font-family: "Oswald", sans-serif;
   font-size: 75px;
@@ -101,6 +102,7 @@ ol {
   height: 386px;
   width: 711px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .result__video {
@@ -110,7 +112,7 @@ ol {
 }
 
 .content__list {
-  gap: 30px;
+  gap: 28px;
   display: flex;
   flex-direction: column;
 }
@@ -122,7 +124,7 @@ ol {
 
 .content__video-card-thumbnail {
   height: 103px;
-  min-width: 194px;
+  width: 194px;
   object-fit: cover;
   object-position: center;
 }
@@ -184,7 +186,7 @@ ol {
   line-height: 16.2px; /* 90% */
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   overflow: hidden;
 }
 
@@ -229,8 +231,12 @@ ol {
   border-bottom: 1px solid #FFF;
   border-left: none;
   border-right: none;
-  background-color: #1B1919;
+  background-color: transparent;
   appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__textfield::placeholder {
@@ -273,11 +279,11 @@ ol {
   border: 1px solid #FFF;
   background-color: transparent;
   cursor: pointer;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
     width: 194px;
-    height: 34px;
     align-self: flex-end;
 }
 
@@ -303,10 +309,6 @@ ol {
   outline-offset: 1px;
 }
 
-.content__card-link {
-  display: block;
-}
-
 .content__card-link_current {
   background-color: #545050;
 }
@@ -330,12 +332,4 @@ ol {
 
 .content__list-item {
   padding: 0 3px;
-}
-
-.result__video-container {
-  position: relative;
-}
-
-.content__list-container {
-  position: relative;
 }
